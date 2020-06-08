@@ -6,7 +6,7 @@ TARG=luac
 BIN=/$objtype/bin/ape
 
 OFILES=\
-    lua.$O \
+    luac.$O \
     
 HFILES=\
     /sys/include/ape/lauxlib.h \
@@ -24,7 +24,7 @@ UPDATE=\
 
 CC=pcc
 LD=pcc
-CFLAGS= -c -I. -D_C99_SNPRINTF_EXTENSION -D_POSIX_SOURCE \
+CFLAGS= -c -I. -I../lua -D_C99_SNPRINTF_EXTENSION -D_POSIX_SOURCE \
         -D_SUSV2_SOURCE -DLUA_POSIX -DENABLE_CJSON_GLOBAL \
         -DPlan9 -DMAKE_LUAC
 
